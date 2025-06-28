@@ -9,14 +9,24 @@
   </head>
 
 <body>
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('header nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
   <header>
       <img src="/Icons/logo-png_1.png" alt="Logo Automatrônica" class="cta-logo">
+      <div class="menu-toggle">&#9776;</div>
       <nav>
         <a href="index.html">Home</a>
         <a href="sobre-nos.html">Sobre nós</a>
         <a href="https://forms.gle/NtHuNDvdPb5iutCC9" class="btn-primary">Fale conosco</a
         >
       </nav>
+      
   </header>
 
 
@@ -135,13 +145,14 @@
         </div>
       </section>
 
-      <section class="section">
+<!--poque escolher-->
+      <section class="porque-section">
         <h2 class="subtitulos">Porque escolher a Automatrônica?</h2>
-        <div class="porque-escolher">
+        <div class="porque">
           <div class="porque-card">
             <h3>01. Experiência</h3>
             <p class="porque-card-p">
-              Profissionais com experiência comprovada em grandes industrias,
+              Profissionais com experiência comprovada em grandes indústrias,
               garantindo soluções personalizadas e eficientes.
             </p>
           </div>
@@ -161,6 +172,8 @@
               suporte técnico especializado a qualquer hora.
             </p>
           </div>
+        </div>
+      </section>
 
     </main>
 
