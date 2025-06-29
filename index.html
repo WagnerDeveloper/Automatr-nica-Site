@@ -5,21 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automatrônica Services</title>
     <link href="Style.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="/Icons/ba2b0087-df31-40e8-a0ad-8548609bbf77.jpg" />
+    <link rel="icon" type="image/png" href="/Icons/64x64.jpg" />
   </head>
 
 <body>
-  <script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('header nav');
-
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-  </script>
+  
   <header>
-      <img src="/Icons/logo-png_1.png" alt="Logo Automatrônica" class="cta-logo">
-      <div class="menu-toggle">&#9776;</div>
+      <img src="/Icons/logo-png_1.png" alt="Logo Automatrônica" class="cta-logo"/>
+      <div class="menu-toggle" id="btnMobileMenu">&#9776;</div>
       <nav>
         <a href="index.html">Home</a>
         <a href="sobre-nos.html">Sobre nós</a>
@@ -213,5 +206,31 @@
             <img src="Icons/whatsapp.png" alt="WhatsApp" />
           </a>
         </footer>
+
+      <!--Menu lateral mobile-->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="mobile-menu-header">
+    <img src="/Icons/logo-png_1.png" alt="Logo Automatrônica" class="cta-logo" />
+    <span class="close-menu" onclick="toggleMenu()">&times;</span>
+  </div>
+  <nav class="mobile-menu-nav">
+    <a href="index.html">Home</a>
+    <a href="sobre-nos.html">Sobre nós</a>
+    <a href="https://forms.gle/NtHuNDvdPb5iutCC9" class="btn-primary">Fale conosco</a>
+  </nav>
+</div>
+
+<script>
+  const btnMobile = document.getElementById("btnMobileMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  btnMobile.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+  });
+
+  function toggleMenu() {
+    mobileMenu.classList.remove("show");
+  }
+</script>
 </body>
 </html>
